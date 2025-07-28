@@ -22,10 +22,7 @@ RUN npm run sbom
 FROM gcr.io/distroless/nodejs22-debian12
 ARG BUILD_DATE
 ARG VCS_REF
-RUN apt-get remove -y gcc && \
-    apt-get autoremove -y && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get remove -y gcc
 
 LABEL maintainer="Bjoern Kimminich <bjoern.kimminich@owasp.org>" \
     org.opencontainers.image.title="OWASP Juice Shop" \
