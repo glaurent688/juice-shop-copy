@@ -19,6 +19,9 @@ ARG CYCLONEDX_NPM_VERSION=latest
 RUN npm install -g @cyclonedx/cyclonedx-npm@$CYCLONEDX_NPM_VERSION
 RUN npm run sbom
 RUN apt-get remove -y gcc
+RUN apt-get autoremove -y 
+RUN apt-get clean 
+RUN rm -rf /var/lib/apt/lists/*
 
 FROM gcr.io/distroless/nodejs22-debian12
 ARG BUILD_DATE
