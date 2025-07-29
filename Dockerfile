@@ -27,11 +27,6 @@ FROM gcr.io/distroless/nodejs22-debian12:debug
 ARG BUILD_DATE
 ARG VCS_REF
 
-RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install -y gcc
-RUN rm -rf /var/lib/apt/lists/*
-
 LABEL maintainer="Bjoern Kimminich <bjoern.kimminich@owasp.org>" \
     org.opencontainers.image.title="OWASP Juice Shop" \
     org.opencontainers.image.description="Probably the most modern and sophisticated insecure web application" \
