@@ -23,7 +23,7 @@ RUN apt-get autoremove -y
 RUN apt-get clean 
 RUN rm -rf /var/lib/apt/lists/*
 
-FROM node:22-bullseye
+FROM gcr.io/distroless/nodejs20-debian11:debug
 ARG BUILD_DATE
 ARG VCS_REF
 
