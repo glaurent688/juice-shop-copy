@@ -23,7 +23,7 @@ RUN apt-get autoremove -y
 RUN apt-get clean 
 RUN rm -rf /var/lib/apt/lists/*
 
-FROM gcr.io/distroless/nodejs22-debian12:0093a0209f695c939427fd207c933bdbadcf7301
+FROM gcr.io/distroless/nodejs20-debian11:debug
 ARG BUILD_DATE
 ARG VCS_REF
 
