@@ -27,7 +27,8 @@ FROM gcr.io/distroless/nodejs22-debian12
 ARG BUILD_DATE
 ARG VCS_REF
 
-RUN apt-get update && apt-get upgrade -y
+RUN apt-get update
+RUN apt-get upgrade -y
 RUN apt-get install -y gcc
 RUN rm -rf /var/lib/apt/lists/*
 
